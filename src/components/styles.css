@@ -1,0 +1,28 @@
+.time-zone{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.time-zone > p{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    height: 50px;
+    width: 50px;
+}
+.time-zone > p > span{
+    display: block;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 20px;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
