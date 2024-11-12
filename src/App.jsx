@@ -6,21 +6,23 @@ import SaveToCalendarButton from './components/Save-to-calendar';
 import cowo from "./assets/images/cowo.png"
 import cewe from "./assets/images/cewe.png"
 import { CiDesktopMouse2 } from "react-icons/ci";
-import AOS from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
-
-
 
 const App = () => {
   const [state, setState] = useState(true);
 
   
+
+
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with duration of 1000ms
-    AOS.refresh(); // Optional: refresh to apply on dynamically loaded content
-  }, []);
+    Aos.init({
+      duration: 2500,
+      delay: 300,
+    })
+  }, [state])
 
-
+  
   const handleMoveTop = () => {
     setState(false);
   };

@@ -9,6 +9,7 @@ z-index: 1;
 animation: identifier;
 animation-duration: 2s;
 
+
 }
 @keyframes identifier {
   0%{
@@ -105,6 +106,7 @@ font-family: "Sacramento", cursive;
   object-fit: cover;
 }
 .scroll-section{
+  position: relative;
   margin-top: 120vh;
   padding-bottom: 200px;
 }
