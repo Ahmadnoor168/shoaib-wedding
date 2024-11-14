@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useRef  } from 'react';
 import './App.css';
 import couple from "./assets/images/couple.png"
 import Time from "./components/Time"
@@ -8,12 +8,49 @@ import cewe from "./assets/images/cewe.png"
 import { CiDesktopMouse2 } from "react-icons/ci";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import auto from "./assets/song.mp3"
+import { useParams } from 'react-router-dom';
+import { VscUnmute } from "react-icons/vsc";
+import { VscMute } from "react-icons/vsc";
+
+
 
 const App = () => {
   const [state, setState] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
+  const audioRef = useRef(null);
+  const { id } = useParams(); // Access the `id` parameter from the URL
+  const [name, setName] = useState(''); // State to store the name
 
-  
-
+  const users = [
+    { name: "Usama Liaqat", id: 1121 },
+    { name: "Musawwar Riaz", id: 1122 },
+    { name: "Jameel Ahmad", id: 1123 },
+    { name: "Muhammad Bilawal", id: 1124 },
+    { name: "Muhammad Faizan", id: 1125 },
+    { name: "Hassan Hashmi", id: 1126 },
+    { name: "Muhammad Zahid", id: 1127 },
+    { name: "Arslam Bin Farooq", id: 1128 },
+    { name: "Sameer Mukhtar", id: 1129 },
+    { name: "Danish Raza", id: 1130 },
+    { name: "Sir Haleem", id: 1131 },
+    { name: "Sir Rizwan", id: 1132 },
+    { name: "Rizwana Gulam M", id: 1133 },
+    { name: "Amina Ehsan", id: 1134 },
+    { name: "Naima Kainat", id: 1135 },
+    { name: "Asifa Ch.", id: 1136 },
+  ];
+  useEffect(() => {
+    // Match the `id` from URL with the users array
+    const matchedUser = users.find(user => user.id === parseInt(id));
+    
+    // If a match is found, set the name in the state
+    if (matchedUser) {
+      setName(matchedUser.name);
+    } else {
+      setName('User not found'); // Handle case when no user is found
+    }
+  }, [id]); 
 
   useEffect(() => {
     Aos.init({
@@ -22,11 +59,28 @@ const App = () => {
     })
   }, [state])
 
-  
+  useEffect(() => {
+    if (!state && audioRef.current) {
+      audioRef.current.play();
+    }
+  }, [state]);
   const handleMoveTop = () => {
     setState(false);
   };
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    if (audioRef.current) {
+      audioRef.current.muted = !audioRef.current.muted;
+    }
+  }
 
+
+  const openLocation = () => {
+    window.open(
+      'https://maps.app.goo.gl/8wPdvkdLzMHfh23UA',
+      '_blank'
+    );
+  };
   return (
     <>
       <div>
@@ -38,9 +92,10 @@ const App = () => {
           transition: 'top 2s ease, opacity 2s ease',
         }} >
           <div className='mode-data'>
+            <p>{name} is specially invited to our event </p>
             <p>The Wedding Of</p>
             <img src={couple} />
-            <p>Shoab and Shiba</p>
+            <p>Muhammad Shoaib and Farah Ashiq</p>
             <p>To the Honorable Sir/Madam/Brother/Sister</p>
             <p>All friends</p>
             <button onClick={() => handleMoveTop()} >Open Invitation</button>
@@ -64,7 +119,7 @@ const App = () => {
           <div className='main-continer-box'>
           <p>Wedding Invitation</p>
           <img src={couple} />
-          <p>Shoaib & Shiba</p>
+          <p>Muhammad Shoaib & Farah Ashiq</p>
           <p>Thursday, 1 December 2024</p>
           <Time />
           <SaveToCalendarButton />
@@ -97,7 +152,7 @@ const App = () => {
             <img src={cowo} data-aos="fade-up"
      data-aos-duration="3000" />
             <p data-aos="fade-up"
-     data-aos-duration="3000">Shoaib</p>
+     data-aos-duration="3000">Muhammad Shoaib</p>
             <p data-aos="fade-up"
      data-aos-duration="3000">from</p>
             <p data-aos="fade-up"
@@ -105,7 +160,7 @@ const App = () => {
             <img src={cewe} data-aos="fade-up"
      data-aos-duration="3000" />
             <p data-aos="fade-up"
-     data-aos-duration="3000">Shiba</p>
+     data-aos-duration="3000">Farah Ashiq</p>
             <p data-aos="fade-up"
      data-aos-duration="3000">from</p>
             <p data-aos="fade-up"
@@ -151,30 +206,32 @@ const App = () => {
          
           <div data-aos="fade-up-left">
             <h3>Mehandi</h3>
-            <p>Thursday, 14th November 2024</p>
-            <p>At 08:00 AM WIB until completion</p>
+            <p>Thursday, 29th November 2024</p>
+            <p>Starting at 8:00 PM WIB and continuing until completion.</p>
           </div>
 
           <div data-aos="fade-down-right">
             <h3>Barat</h3>
-            <p>Thursday, 14th November 2024</p>
-            <p>At 11:00 AM WIB until completion</p>
+            <p>Thursday, 30th November 2024</p>
+            <p>Starting at 8:00 PM WIB and continuing until completion.</p>
           </div>
 
           <div data-aos="fade-down-left">
             <h3>Walima</h3>
-            <p>Thursday, 14th November 2024</p>
-            <p>At 11:00 AM WIB until completion</p>
+            <p>Thursday, 1th December 2024</p>
+            <p>Starting at 8:00 PM WIB and continuing until completion.</p>
           </div>
 
-          <button data-aos="flip-left" >View on Google Maps</button>
+          <button data-aos="flip-left" onClick={openLocation} >View on Google Maps</button>
+
+      
         </div>
 
 
 
 
 
-        <div className='love-git' data-aos="flip-up">
+        {/* <div className='love-git' data-aos="flip-up">
           <p>Love Gift</p>
           <p>Without diminishing respect, for those of you who wish to show your love and affection for us, you may do so through:</p>
          
@@ -183,7 +240,7 @@ const App = () => {
             <div>Jazzcash</div>
           </div>
 
-        </div>
+        </div> */}
 
         <div className='happiness'>
           <p data-aos="fade-right"
@@ -198,6 +255,25 @@ const App = () => {
         </div>
       </div>
 
+
+
+
+      <audio ref={audioRef} src={auto} loop muted={isMuted} />
+      <button className="mute-button" onClick={toggleMute} style={{
+        position: 'fixed',
+        right: '20px',
+        bottom: '20px',
+        padding: '10px',
+        fontSize: '16px',
+        background: '#fff',
+        border: 'none',
+        outline:"none",
+        borderRadius: '5px',
+        cursor: 'pointer',
+        backgroundColor:"transparent"
+      }}>
+        {isMuted ? <VscUnmute /> : <VscMute />}
+      </button>
     </>
   );
 };

@@ -66,24 +66,25 @@ animation-duration: 2s;
   justify-content: center;
   align-items: center;
 }
-.mode-data > p:nth-child(1){
-font-family: "Sacramento", cursive;
-}
 .mode-data>p:nth-child(1){
   font-size: 44px;
   font-family: "Sacramento", cursive;
 }
-.mode-data>p:nth-child(3){
-  font-size: 36px;
+.mode-data>p:nth-child(2){
+  font-size: 44px;
   font-family: "Sacramento", cursive;
 }
 .mode-data>p:nth-child(4){
+  font-size: 36px;
+  font-family: "Sacramento", cursive;
+}
+.mode-data>p:nth-child(5){
   font-size: 19px;
   font-family: "Josefin Sans", sans-serif;
   margin-top: 20px;
 
 }
-.mode-data>p:nth-child(5){
+.mode-data>p:nth-child(6){
   font-size: 22px;
   margin-top: 20px;
   font-family: "Josefin Sans", sans-serif;

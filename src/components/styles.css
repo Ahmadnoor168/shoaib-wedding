@@ -26,3 +26,14 @@
     outline: 0px;
     cursor: pointer;
 }
+.btn2{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 9px 20px;
+    border-radius: 20px;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+    border: 2px solid black;
+    margin-left: 10px;
+}

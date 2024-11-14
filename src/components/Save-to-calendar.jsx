@@ -17,11 +17,30 @@ const SaveToCalendarButton = () => {
     // Open the Google Calendar URL in a new tab
     window.open(googleCalendarUrl, '_blank');
   };
+  const downloadImages = () => {
+    const imageUrls = [
+      '/mehandiAndBarat.jpeg',
+      '/walima.jpeg'  
+    ];
 
+    imageUrls.forEach((url, index) => {
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `Invitation${index + 1}.jpeg`; // Set the download name for each image
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
   return (
+    <div style={{display:"flex"}}>
     <button onClick={handleOpenCalendar} className='btn'>
       Save to Calendar
     </button>
+    <button  className='btn2' onClick={downloadImages}>
+    Download Invetation
+  </button>
+  </div>
   );
 };
 
