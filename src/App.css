@@ -67,24 +67,48 @@ animation-duration: 2s;
   align-items: center;
 }
 .mode-data>p:nth-child(1){
-  font-size: 44px;
+  font-size: 28px;
   font-family: "Sacramento", cursive;
+  position: relative;
+  text-align: center;
 }
+.mode-data>p:nth-child(1)>span{
+  font-family: "Josefin Sans", sans-serif;
+}
+.mode-data>p:nth-child(1):hover>span::after{
+  content: ''; 
+  height: 5px;
+  width: 100%;
+  background-color: yellowgreen;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
 .mode-data>p:nth-child(2){
-  font-size: 44px;
+  font-size: 34px;
   font-family: "Sacramento", cursive;
+  position: relative;
+  text-align: center;
 }
-.mode-data>p:nth-child(4){
-  font-size: 36px;
+
+
+.mode-data>p:nth-child(3){
+  font-size: 44px;
   font-family: "Sacramento", cursive;
 }
 .mode-data>p:nth-child(5){
+  font-size: 36px;
+  font-family: "Sacramento", cursive;
+
+}
+.mode-data>p:nth-child(6){
   font-size: 19px;
   font-family: "Josefin Sans", sans-serif;
   margin-top: 20px;
 
 }
-.mode-data>p:nth-child(6){
+.mode-data>p:nth-child(7){
   font-size: 22px;
   margin-top: 20px;
   font-family: "Josefin Sans", sans-serif;

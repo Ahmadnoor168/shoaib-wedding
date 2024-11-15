@@ -10,8 +10,13 @@ const WeddingInvitation = () => {
   const validIDs = [
     "1121", "1122", "1123", "1124", "1125",
     "1126", "1127", "1128", "1129", "1130",
-    "1131", "1132", "1133", "1134", "1135", "1136"
+    "1131", "1132", "1133", "1134", "1135", "1136",
+    "1137", "1138", "1139", "1140", "1141", "1142",
+    "1143", "1144", "1145", "1146", "1147", "1148",
+    "1149", "1150", "1160", "1161", "1162", "1163",
+    "1164"
   ];
+  
   const handleIDCheck = () => {
     if (validIDs.includes(guestID)) {
 
@@ -32,17 +37,15 @@ const WeddingInvitation = () => {
           <span>Welcome to the Wedding of</span>
         </div>
         <div className="title-2">
-          <span>Shoaib </span>
+          <span> Muhammad Shoaib </span>
         </div>
         <p className="invitation-message">
-          We are delighted to have you join us on our special day. Enter your
-          Guest ID below to receive your personal invitation and join the
-          celebration!
+        Join us as we embark on a beautiful journey of love and togetherness.
         </p>
 
         <div className="input-container">
           <input
-            placeholder="Enter Guest ID"
+            placeholder="Please enter your guest ID below to receive your personal invitation"
             type="text"
             className="input-mail"
             value={guestID}

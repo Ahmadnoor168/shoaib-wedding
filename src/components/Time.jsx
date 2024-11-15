@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./styles.css"
 const CountdownTimer = () => {
   // Set the target date and time (December 1, 12:01 PM)
-  const targetDate = new Date('December 1, 2024 12:01:00').getTime();
+  const targetDate = new Date('November 30, 2024 12:01:00').getTime();
 
   // State to store the time remaining in days, hours, minutes, and seconds
   const [timeRemaining, setTimeRemaining] = useState({

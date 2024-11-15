@@ -8,7 +8,7 @@ import cewe from "./assets/images/cewe.png"
 import { CiDesktopMouse2 } from "react-icons/ci";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import auto from "./assets/song.mp3"
+import auto from "./assets/WhatsApp Audio 2024-11-14 at 17.44.05.mpeg"
 import { useParams } from 'react-router-dom';
 import { VscUnmute } from "react-icons/vsc";
 import { VscMute } from "react-icons/vsc";
@@ -39,7 +39,27 @@ const App = () => {
     { name: "Amina Ehsan", id: 1134 },
     { name: "Naima Kainat", id: 1135 },
     { name: "Asifa Ch.", id: 1136 },
+    { name: "Bhai Waqas", id: 1137 },
+    { name: "Bhai Awais", id: 1138 },
+    { name: "Bhai Haseeb", id: 1139 },
+    { name: "Khateeb Talib", id: 1140 },
+    { name: "Zia Talib", id: 1141 },
+    { name: "Khubaib Talib", id: 1142 },
+    { name: "Hasfa Talib", id: 1143 },
+    { name: "Ayesha Talib", id: 1144 },
+    { name: "Farman Elahi", id: 1145 },
+    { name: "Ustad Luqman", id: 1146 },
+    { name: "Zubair Zafar", id: 1147 },
+    { name: "Saqib Ch.", id: 1148 },
+    { name: "Salman Ch.", id: 1149 },
+    { name: "Muavia Tahir", id: 1150 },
+    { name: "Muhammad Usman", id: 1160 },
+    { name: "Muhammad Luqman", id: 1161 },
+    { name: "Safia Luqman", id: 1162 },
+    { name: "Moin Uddin", id: 1163 },
+    { name: "Sir Moeen", id: 1164 }
   ];
+  
   useEffect(() => {
     // Match the `id` from URL with the users array
     const matchedUser = users.find(user => user.id === parseInt(id));
@@ -92,10 +112,13 @@ const App = () => {
           transition: 'top 2s ease, opacity 2s ease',
         }} >
           <div className='mode-data'>
-            <p>{name} is specially invited to our event </p>
+            <p>Dear <span>{name}</span></p>
+            <p> I am cordially invites you to join us for our wedding ceremony.
+            Let's create unforgettable memories together! </p>
+
             <p>The Wedding Of</p>
             <img src={couple} />
-            <p>Muhammad Shoaib and Farah Ashiq</p>
+            <p>M.Shoaib with Farah Ashiq</p>
             <p>To the Honorable Sir/Madam/Brother/Sister</p>
             <p>All friends</p>
             <button onClick={() => handleMoveTop()} >Open Invitation</button>
@@ -119,8 +142,8 @@ const App = () => {
           <div className='main-continer-box'>
           <p>Wedding Invitation</p>
           <img src={couple} />
-          <p>Muhammad Shoaib & Farah Ashiq</p>
-          <p>Thursday, 1 December 2024</p>
+          <p>M.Shoaib with Farah Ashiq</p>
+          <p>Saturday, 30 November 2024</p>
           <Time />
           <SaveToCalendarButton />
 
@@ -182,7 +205,7 @@ const App = () => {
      data-aos-easing="ease-in-sine">Allah Subhanahu Wa Ta'ala Said</p>
             <p data-aos="fade-left"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine">Aur uski (Allah ki) azmat ke nishanoun mein se ek yeh hai ke usne tumhare liye tumhari hi jins se joore banaye, taake tum unki taraf mael ho aur usmein sukoon pao, aur usne tumhare beech mein muhabbat aur rahmati daal di. Be-shak, is mein sochne walon ke liye Allah ki azmat ke nishanay hain.</p>
+     data-aos-easing="ease-in-sine">Aur uski (Allah ki) azmat ke Nishaniyon mein se ek yeh hai ke usne tumhare liye tumhari hi jins se joore banaye, taake tum unki taraf mael ho aur usmein sukoon pao, aur usne tumhare beech mein muhabbat aur rahmati daal di. Be-shak, is mein sochne walon ke liye Allah ki azmat ke Nishaniyan hain.</p>
             <p data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">Surah Ar-Rum Ayat 21</p>
@@ -206,20 +229,20 @@ const App = () => {
          
           <div data-aos="fade-up-left">
             <h3>Mehandi</h3>
-            <p>Thursday, 29th November 2024</p>
+            <p>FRIDAY, 29th November 2024</p>
             <p>Starting at 8:00 PM WIB and continuing until completion.</p>
           </div>
 
           <div data-aos="fade-down-right">
             <h3>Barat</h3>
-            <p>Thursday, 30th November 2024</p>
-            <p>Starting at 8:00 PM WIB and continuing until completion.</p>
+            <p>SATURDAY, 30th November 2024</p>
+            <p>Departure at 11AM and continuing untill completion.</p>
           </div>
 
           <div data-aos="fade-down-left">
             <h3>Walima</h3>
-            <p>Thursday, 1th December 2024</p>
-            <p>Starting at 8:00 PM WIB and continuing until completion.</p>
+            <p>SUNDAY, 1th December 2024</p>
+            <p>Starting at 1 PM and continuing untill completion.</p>
           </div>
 
           <button data-aos="flip-left" onClick={openLocation} >View on Google Maps</button>
