@@ -38,7 +38,7 @@ const SaveToCalendarButton = () => {
       Save to Calendar
     </button>
     <button  className='btn2' onClick={downloadImages}>
-    Download Invetation
+    Download invitation
   </button>
   </div>
   );

@@ -30,7 +30,7 @@ const App = () => {
     { name: "Muhammad Faizan", id: 1125 },
     { name: "Hassan Hashmi", id: 1126 },
     { name: "Muhammad Zahid", id: 1127 },
-    { name: "Arslam Bin Farooq", id: 1128 },
+    { name: "Arslan Bin Farooq", id: 1128 },
     { name: "Sameer Mukhtar", id: 1129 },
     { name: "Danish Raza", id: 1130 },
     { name: "Sir Haleem", id: 1131 },
@@ -57,8 +57,17 @@ const App = () => {
     { name: "Muhammad Luqman", id: 1161 },
     { name: "Safia Luqman", id: 1162 },
     { name: "Moin Uddin", id: 1163 },
-    { name: "Sir Moeen", id: 1164 }
+    { name: "Sir Moeen", id: 1164 },
+    { name: "Farah Ashiq(Bridal)", id: 1165 },
+    { name: "M.Shoaib(Groom)", id: 1166 },
+    { name: "Solar Health Team", id: 1167 },
+    { name: "Abu Bakar", id: 1168 },
+    { name: "Abu Sufyan", id: 1169 },
+    { name: "Muhammad Zeeshan", id: 1170 },
+    { name: "Akhtar Ali", id: 1171 },
+    { name: "Muhammad Kashif", id: 1172 },
   ];
+  
   
   useEffect(() => {
     // Match the `id` from URL with the users array
@@ -97,7 +106,8 @@ const App = () => {
 
   const openLocation = () => {
     window.open(
-      'https://maps.app.goo.gl/8wPdvkdLzMHfh23UA',
+      'https://maps.app.goo.gl/SmkJMLePSG1he5fKA',
+      
       '_blank'
     );
   };
@@ -187,7 +197,7 @@ const App = () => {
             <p data-aos="fade-up"
      data-aos-duration="3000">from</p>
             <p data-aos="fade-up"
-     data-aos-duration="3000">Gujran wala</p>
+     data-aos-duration="3000">GujranWala</p>
           </div>
         </div>
 
@@ -272,6 +282,9 @@ const App = () => {
           <p data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+
+
+
           <p data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">اَلْحَمْدُ للَّهِ رَبِّ الْعالَمِينَ          </p>
@@ -293,7 +306,7 @@ const App = () => {
         outline:"none",
         borderRadius: '5px',
         cursor: 'pointer',
-        backgroundColor:"transparent"
+        backgroundColor:"red",
       }}>
         {isMuted ? <VscUnmute /> : <VscMute />}
       </button>

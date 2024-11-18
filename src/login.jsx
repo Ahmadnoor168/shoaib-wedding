@@ -14,7 +14,8 @@ const WeddingInvitation = () => {
     "1137", "1138", "1139", "1140", "1141", "1142",
     "1143", "1144", "1145", "1146", "1147", "1148",
     "1149", "1150", "1160", "1161", "1162", "1163",
-    "1164"
+    "1164","1165","1166","1167","1168","1169","1170",
+    "1171","1172"
   ];
   
   const handleIDCheck = () => {
@@ -45,7 +46,7 @@ const WeddingInvitation = () => {
 
         <div className="input-container">
           <input
-            placeholder="Please enter your guest ID below to receive your personal invitation"
+            placeholder="Enter your guest ID here."
             type="text"
             className="input-mail"
             value={guestID}
