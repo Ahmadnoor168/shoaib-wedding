@@ -306,7 +306,7 @@ const App = () => {
         outline:"none",
         borderRadius: '5px',
         cursor: 'pointer',
-        backgroundColor:"red",
+        backgroundColor:"transparent",
       }}>
         {isMuted ? <VscUnmute /> : <VscMute />}
       </button>
