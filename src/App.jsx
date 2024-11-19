@@ -39,8 +39,8 @@ const App = () => {
     { name: "Amina Ehsan", id: 1134 },
     { name: "Naima Kainat", id: 1135 },
     { name: "Asifa Ch.", id: 1136 },
-    { name: "Bhai Waqas", id: 1137 },
-    { name: "Bhai Awais", id: 1138 },
+    { name: "Mr & Mrs. Waqas", id: 1137 },
+    { name: "Mr & Mrs. Awais", id: 1138 },
     { name: "Bhai Haseeb", id: 1139 },
     { name: "Khateeb Talib", id: 1140 },
     { name: "Zia Talib", id: 1141 },
@@ -66,6 +66,7 @@ const App = () => {
     { name: "Muhammad Zeeshan", id: 1170 },
     { name: "Akhtar Ali", id: 1171 },
     { name: "Muhammad Kashif", id: 1172 },
+    { name: "Waseem Waraich ", id: 1173 },
   ];
   
   
