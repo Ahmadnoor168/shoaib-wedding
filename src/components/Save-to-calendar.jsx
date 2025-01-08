@@ -7,8 +7,8 @@ const SaveToCalendarButton = () => {
       title: 'My Event',
       description: 'Description of the event',
       location: 'Event Location',
-      start: '20241201T120100Z', // Format: YYYYMMDDTHHmmSSZ in UTC
-      end: '20241201T130100Z',   // Format: YYYYMMDDTHHmmSSZ in UTC
+      start: '20250126 T120100Z', // Format: YYYYMMDDTHHmmSSZ in UTC
+      end: '20250126 T130100Z',   // Format: YYYYMMDDTHHmmSSZ in UTC
     };
 
     // Generate the Google Calendar URL

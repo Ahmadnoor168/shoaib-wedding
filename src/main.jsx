@@ -12,7 +12,7 @@ import Login from './login.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/home/:id",
+    path: "/home",
     element: <App />,
   },
   {
