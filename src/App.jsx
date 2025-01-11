@@ -84,7 +84,7 @@ const App = () => {
 
             <p>The Wedding Of</p>
             <img src={couple} />
-            <p>Qurban Ali With Nida rukhsar</p>
+            <p>Nida Rukhsar With Qurban Ali</p>
             <p>To the Honorable Sir/Madam/Brother/Sister</p>
             <p>All friends</p>
             <button onClick={() => handleMoveTop()} >Open Invitation</button>
@@ -103,7 +103,7 @@ const App = () => {
           <div className='main-continer-box'>
           <p>Wedding Invitation</p>
           <img src={couple} />
-          <p>Qurban Ali With Nida rukhsar
+          <p> Nida Rukhsar With Qurban Ali 
           </p>
           <p>Sunday, 26 January 2025</p>
           <Time />
@@ -201,11 +201,11 @@ const App = () => {
             <p>Departure at 11AM and continuing untill completion.</p>
           </div>
 
-          <div data-aos="fade-down-left">
+          {/* <div data-aos="fade-down-left">
             <h3>Walima</h3>
             <p>Monday, 27th January 2025</p>
             <p>Starting at 1 PM and continuing untill completion.</p>
-          </div>
+          </div> */}
 
           <button data-aos="flip-left" onClick={openLocation} >View on Google Maps</button>
 

@@ -19,8 +19,8 @@ const SaveToCalendarButton = () => {
   };
   const downloadImages = () => {
     const imageUrls = [
-      '/mehandiAndBarat.jpeg',
-      '/walima.jpeg'  
+      '/one.jpeg',
+      '/two.jpeg'  
     ];
 
     imageUrls.forEach((url, index) => {
