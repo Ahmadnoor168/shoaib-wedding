@@ -84,7 +84,7 @@ const App = () => {
 
             <p>The Wedding Of</p>
             <img src={couple} />
-            <p>Nida Rukhsar With Qurban Ali</p>
+            <p style={{textAlign:"center"}}>Nida Rukhsar With Qurban Ali</p>
             <p>To the Honorable Sir/Madam/Brother/Sister</p>
             <p>All friends</p>
             <button onClick={() => handleMoveTop()} >Open Invitation</button>
@@ -103,7 +103,7 @@ const App = () => {
           <div className='main-continer-box'>
           <p>Wedding Invitation</p>
           <img src={couple} />
-          <p> Nida Rukhsar With Qurban Ali 
+          <p style={{textAlign:"center"}}> Nida Rukhsar With Qurban Ali 
           </p>
           <p>Sunday, 26 January 2025</p>
           <Time />
@@ -164,7 +164,7 @@ const App = () => {
           <div>
             <p data-aos="fade-right"
      data-aos-offset="200"
-     data-aos-easing="ease-in-sine" data-aos-duration="2000">Allah Subhanahu Wa Ta'ala Said</p>
+     data-aos-easing="ease-in-sine" data-aos-duration="2000" style={{textAlign:"center"}}>Allah Subhanahu Wa Ta'ala Said</p>
             <p data-aos="fade-left"
      data-aos-offset="200"
      data-aos-easing="ease-in-sine" data-aos-duration="2000">Aur uski (Allah ki) azmat ke Nishaniyon mein se ek yeh hai ke usne tumhare liye tumhari hi jins se joore banaye, taake tum unki taraf mael ho aur usmein sukoon pao, aur usne tumhare beech mein muhabbat aur rahmati daal di. Be-shak, is mein sochne walon ke liye Allah ki azmat ke Nishaniyan hain.</p>

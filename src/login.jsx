@@ -22,13 +22,14 @@ const WeddingInvitation = () => {
         <p className="invitation-message">
           Join us as we embark on a beautiful journey of love and togetherness.
         </p>
-        <p className="welcome-message">
-          Let's check your invitation and get ready to celebrate this special occasion with us.
-        </p>
-
         <button className="submit" type="button" onClick={handleNavigate}>
           <span className="sign-text">Enter Celebration</span>
         </button>
+        <p className="invitation-message">
+          Let's check your invitation and get ready to celebrate this special occasion with us.
+        </p>
+
+    
 
         <section className="bg-stars">
           <span className="star"></span>
